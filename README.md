@@ -53,4 +53,4 @@ This project is licensed under the MIT License.
 Contributions are welcome! Open an issue or submit a pull request.
 
 📬 Contact
-For inquiries, reach out at your.email@example.com or open an issue in the repo.
+For inquiries, reach out at devansh05awasthi@gmail.com or open an issue in the repo.
