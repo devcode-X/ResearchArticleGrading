@@ -18,12 +18,9 @@ The manual evaluation of research papers for conference submission is **labor-in
   - `K-Nearest Neighbors (KNN)`: Classification for research categories  
 - **Data Processing:** 150 research papers, with 15 labeled examples for training.
 
-## 📂 Project Structure
-RAG-101/ │── data/ # Research paper dataset │── models/ # AI models for classification │── scripts/ # Training & evaluation scripts │── src/ # Core implementation │── notebooks/ # Jupyter notebooks for experimentation │── requirements.txt # Dependencies │── README.md # Project documentation
 
-bash
-Copy
-Edit
+
+
 
 ## 🚀 Getting Started
 
