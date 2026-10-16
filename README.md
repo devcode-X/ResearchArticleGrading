@@ -1,53 +1,67 @@
-# RAG 101 - AI-Driven Research Paper Evaluation
+# 📄 RAG-Powered Research Paper Evaluator — Automated Conference Paper Grading
 
-## 📌 Project Overview
-The manual evaluation of research papers for conference submission is **labor-intensive, time-consuming, and demands significant expertise**. This project, **RAG 101**, leverages AI to **streamline conference selection and research paper evaluation** using the **Pathway Framework**. The system integrates **advanced language models, comparative analysis techniques, and streaming data frameworks** to **automate** and **optimize** these tasks.
+> **Finalist, KDSH 2025 Hackathon** · Built a multi-agent RAG pipeline that auto-evaluates academic research papers for conference publishability using the Pathway streaming framework and LLMs.
 
-## 🚀 Features
-- **Automated Publishability Assessment:** Determines whether a research paper is **publishable** or **non-publishable**.
-- **Conference Recommendation System:** Suggests the best **conference category** for publishable papers.
-- **Semantic Search & FAISS Indexing:** Efficient paper retrieval for comparison.
-- **Machine Learning Models:** Utilizes **K-Nearest Neighbors (KNN), FAISS, and LangChain** for evaluation.
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
+![Pathway](https://img.shields.io/badge/Pathway-Streaming-FF6B35?style=flat-square)
+![RAG](https://img.shields.io/badge/RAG-Pipeline-6B46C1?style=flat-square)
+![LLM](https://img.shields.io/badge/LLM-Powered-412991?style=flat-square)
 
-## 🛠 Tech Stack
-- **Programming Language:** Python
-- **Libraries & Frameworks:**  
-  - `LangChain`: AI-powered research paper analysis  
-  - `FAISS`: Efficient similarity search  
-  - `Semantic Search`: Enhanced document retrieval  
-  - `K-Nearest Neighbors (KNN)`: Classification for research categories  
-- **Data Processing:** 150 research papers, with 15 labeled examples for training.
+---
 
+## 🎯 What It Does
 
+Manual peer review of research papers is slow, expensive, and inconsistent. **RAG 101** automates the conference paper evaluation pipeline — ingesting PDFs in real-time, running multi-dimensional quality assessments via an LLM + RAG system, and producing structured publishability scores.
 
+Built end-to-end at **KDSH 2025** (IIT Kharagpur's Data Science Hackathon) — reached the **semifinals**.
 
+---
 
-## 🚀 Getting Started
+## ✨ Features
 
-### 1️⃣ Clone the Repository
-```sh
-git clone https://github.com/yourusername/rag-101.git
+- **📥 Streaming Ingestion** — real-time paper ingestion via Pathway's document processing pipeline
+- **🔍 RAG-Based Evaluation** — retrieves relevant domain context to benchmark paper quality against existing literature
+- **📊 Multi-Dimensional Scoring** — evaluates novelty, methodology rigor, clarity, and impact
+- **🤖 LLM Judge** — uses language models to generate structured review commentary
+- **⚡ Automated Publishability Decision** — accept / reject / revise with justification
 
+---
+
+## 🛠️ Tech Stack
+
+| Component | Technology |
+|---|---|
+| Streaming Framework | Pathway |
+| RAG Pipeline | LangChain / Custom |
+| LLM Backend | OpenAI GPT / Gemini |
+| Embeddings | Sentence Transformers |
+| Language | Python 3.10+ |
+
+---
+
+## 🚀 Quick Start
+
+```bash
+git clone https://github.com/devcode-X/ResearchArticleGrading
+cd ResearchArticleGrading
 pip install -r requirements.txt
-3️⃣ Run the Application
 
+# Set your API key
+export OPENAI_API_KEY=your_key_here
 
-# Load Model
-model = LangChainFramework(model_name="research-paper-evaluator")
+# Run the evaluation pipeline
+python main.py --paper path/to/paper.pdf
+```
 
-# Evaluate a research paper
-paper_text = "This paper introduces a novel method for..."
-response = model.evaluate(paper_text)
-print(response)  # Output: "Publishable" or "Non-Publishable"
-🎯 Future Improvements
-Expand dataset for more accurate classification.
-Fine-tune models for better generalization.
-Real-time API integration for conference platforms.
-📜 License
-This project is licensed under the MIT License.
+---
 
-🤝 Contributing
-Contributions are welcome! Open an issue or submit a pull request.
+## 📁 Structure
 
-📬 Contact
-For inquiries, reach out at devansh05awasthi@gmail.com or open an issue in the repo.
+```
+ResearchArticleGrading/
+├── pipeline/          # Pathway streaming ingestion
+├── rag/               # RAG retrieval & context building
+├── evaluation/        # LLM grading logic
+├── data/              # Sample papers & ground truth
+└── main.py
+```
